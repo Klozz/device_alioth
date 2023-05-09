@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
+# Inherit some common SkylineUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from alioth device
@@ -23,3 +23,14 @@ PRODUCT_MODEL := POCO F3
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 BUILD_FINGERPRINT := POCO/alioth_global/alioth:13/TKQ1.220829.002/V14.0.4.0.TKHMIXM:user/release-keys
+
+# Rom Specific Flags
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+
+# SkylineUI Maintainer Flags
+SKYLINEUI_MAINTAINER := @DqrKnzx
+CUSTOM_BUILD_TYPE := OFFICIAL
